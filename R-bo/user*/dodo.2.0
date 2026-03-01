@@ -6,8 +6,8 @@ usernameline = 2
 $j = $diseases_caused_by_rations.sample
 nameline = 1
 system('ls')
-$actualname = IO.readlines('./account.txt')[usernameline-1]
-username = IO.readlines('./account.txt')[nameline-1]
+$actualname = "John Doe"
+username = "John Doe"
 $names = ["JOHN","BOB","FRED","JOE","NOAH"]
 # Stats:
 myarray = ["Now with diseases!","Version 2.0!","Go to Oregon!", "You did it!"]
