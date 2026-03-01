@@ -1,0 +1,413 @@
+require 'colorize'
+puts"
+ ____       ____   ___   _    _ 
+|  _ \\     | __ ) / _ \\  \\\\  //
+| |_) |____|  _ \\| | | |  \\\\// 
+|  _ <_____| |_) | |_| |  //\\\\
+|_| \\_\\    |____/ \\___/  //  \\\\".red       
+print"Presents..."
+sleep(3)
+system("clear")
+
+print" ____ ".red
+print"     _        _    \n".light_cyan
+print"|  _ \\ ".red
+print"   | |_ __ _| | ___   \n".light_cyan
+print"| |_) | ".red
+print"  | __/ _` | |/ _ \\\n".light_cyan
+print"|  _ < ".red
+print"   | || (_| | |  __/\n".light_cyan
+print"|_| \\_\\  ".red
+print"  \\__\\__,_|_|\\___|\n".light_cyan
+sleep(1)
+loop do
+    puts"What story do you want to read today? Enter name or press one to see stories "
+    input = gets
+    if input != "story.capybara\n" && input != "novel.natie\n" && input != "1\n" && input != "cyoa.tundra\n" && input != "bible.backandforth\n"
+        puts"Sorry, but that is not a story. Ask Stephen if you want to submit one."
+    end
+    if input == "story.capybara\n"
+        system("clear")
+        sleep(0.2)
+        puts"Capybaras are the largest of the rodents, and they spend their lives in the mud."
+        sleep(0.2)
+        puts" They are generally peaceful animals, unless disturbed or think that they are in danger."
+        sleep(0.2)
+        puts" They weigh about 150 pounds, and are hunted for their meat and large amounts of fat."
+        sleep(0.2)
+        puts" They live in South America, usually in the jungles. "
+        sleep(0.2)
+        puts" They rarely leave the jungle, unless they see a large mud puddle.
+        Did you like the story?"
+    end
+    if input == "story.butterfly\n"
+        puts""
+    end
+    if input == "cyoa.tundra\n"
+        system("clear")
+        puts"You have found a map. It says it leads to a ‘Tundra Treasure’. \nYou fly in an airplane to Siberia and follow the map. \nIt says you can either follow a short but hard path,\n or a long and easy one. Which one will you take?\n  a.Hard\n  b.Easy"
+        puts" _____________________"
+        puts"|        x            |"
+        puts"|      /\\             |"
+        puts"|       | treasure    |"
+        puts"|                     |"
+        puts"|                     |"
+        puts"|           ()        |"
+        puts"|___________|_________|"
+        puts"() = you"
+        puts"| or - = path you have gone"
+        inputthing = gets
+        if inputthing == "a\n"
+            system("clear")
+            puts"This is your current position:"
+            puts" _____________________"
+            puts"|        x            |"
+            puts"|      /\\             |"
+            puts"|       | treasure    |"
+            puts"|                     |"
+            puts"|       ()            |"
+            puts"|       |___          |"
+            puts"|___________|_________|"
+            puts"() = you"
+            puts"| or - = path you have gone"
+            puts"You see a polar bear on a hill in the distance. What will you do?"
+            puts"a. Keep going"
+            puts"b. Wait"
+            puts"c. Go around the hill slowly"
+            inputthing = gets
+            system("clear")
+            if inputthing == "a\n"
+                puts"The bear sees you and you are eaten."
+                puts"THE END".magenta
+                break
+            end
+            if inputthing == "b\n"
+                puts"The Polar Bear knows where you are. Goodbye!"
+                puts"THE END".magenta
+                break
+            end
+            if inputthing == "c\n"
+                puts"The bear does not see you so you escape."
+                puts" _____________________"
+                puts"|        x       /\\   |"
+                puts"|                |_|  |"
+                puts"|           ()        |"
+                puts"|        ___|         |"
+                puts"|       | <- bear     |"
+                puts"|       |___          |"
+                puts"|___________|_________|"
+                puts"() = you"
+                puts"| or - = path you have gone"
+                sleep(4)
+                system("clear")
+                puts"You start freezing, and you see a house. Go in?"
+                puts"y"
+                puts"n"
+                inputthing = gets
+                if inputthing == "y\n"
+                    puts"You warm up in the house and then leave."
+                    puts" _____________________"
+                    puts"|         x      /\\   |"
+                    puts"|               |()|  |"
+                    puts"|           _____|    |"
+                    puts"|        ___|         |"
+                    puts"|       | <- bear     |"
+                    puts"|       |___          |"
+                    puts"|___________|_________|"
+                    sleep(4)
+                    system("clear")
+                    puts"You are near the treasure, but it is getting colder. What will you do?"
+                    puts"a. Turn back! It is so cold!"
+                    puts"b. Keep going! I'm nearly there!"
+                    inputthing = gets
+                    if inputthing == "a\n"
+                        puts"You turn back. You are lost, and soon you freeze."
+                        puts"THE END".magenta
+                    end
+                    if inputthing == "b\n"
+                        puts"You made it! You make an igloo and haul the treasure back to the house. They let you have their car, but for some treasure. You make it to the airport and return. Rich."
+                        puts"THE END".magenta
+                        gets
+                        break
+                    end
+                end
+                if inputthing == "n\n"
+                    puts"You keep going, but then turn back. You are lost, and soon you are just another secret in the icy and unforgiving tundra."
+                    puts"THE END".magenta
+                    break
+                end
+            end
+        end
+        if inputthing == "b\n"
+            puts"This is your current position:"
+        end
+    end
+    if input == "story.butterfly"
+        puts"The butterfly"
+        puts"The butterfly lives in all areas exepet antarctica. In the colder areas, they live shorter lives, but in the tropics, they can take years to fully develope!"
+    end
+    if input == "novel.natie\n"
+        system("clear")
+        puts"Boodo".light_cyan
+        sleep(0.2)
+        puts"and ".light_cyan
+        sleep(0.2)
+        puts"Nathan".light_cyan
+        sleep(0.2)
+        gets
+        system("clear")
+        puts"Contents".light_cyan
+        sleep(0.2)
+        puts"1.Boodo".light_cyan
+        sleep(0.2)
+        puts"2.Yoyo".light_cyan
+        sleep(0.2)
+        puts"3.Bodo hotel".light_cyan
+        sleep(0.2)
+        puts"4.The NEW SDL".light_cyan
+        sleep(0.2)
+        puts"5. ½ of what Natie wanted".light_cyan
+        sleep(0.2)
+        input = gets
+        if input == "1\n"
+            chapter = 1
+        end
+        if input == "2\n"
+            chapter = 2
+        end
+        if input == "3\n"
+            chapter = 3
+        end
+        if chapter == 1
+            system("clear")
+        puts"Chapter 1".light_cyan
+        puts"Boodo" .light_cyan
+        puts"………………………".light_cyan
+        puts"'WELL DOOOODO' said Boodo, standing in the corner, as him and Yoyo were using pistols".light_cyan
+        sleep(0.2)
+        puts"'We need backup,' said Natie. 'The Cats are cornering us.'".light_cyan
+        sleep(0.2)
+        puts"You don't understand?! 'Why is a Boodo talking? Is it really a Dodo?'".light_cyan
+        sleep(0.2)
+        puts"Stop your ninny-munching.".light_cyan
+        sleep(0.2)
+        puts"Yes.".light_cyan
+        sleep(0.2)
+        puts"I will explain. The year is...2030...I guess. But the point is is".light_cyan
+        sleep(0.2)
+        puts"That Doctor Bum-Bum exposed a group of dogs to gamma rays! Oh noes!".light_cyan
+        sleep(0.2)
+        puts"But now they are buff soldier Dodos! Yay! And D.o.d.o stands for".light_cyan
+        sleep(0.2)
+        puts"De-stupidity Of Dirty dOgs! Yay! They".light_cyan
+        sleep(0.2)
+        puts"protect us from the evil crazy cats! Yay! Wait...I thought kitties".light_cyan
+        sleep(0.2)
+        puts"were cuddly! NOPE!".light_cyan
+        sleep(0.2)
+        gets
+        system("clear")
+        puts"Doctor bum-bum wanted more than".light_cyan
+        puts"talking Dodo buff soldiers that had a cool name! NO! He wanted MORE MORE MORE!".light_cyan
+        puts"And so he took the kitties and made creepy cats...ugh...And now we have".light_cyan
+        puts"these:".light_cyan
+        puts"
+        *     *
+        *******
+        **()()*
+        ***__**
+        *******".light_cyan
+        puts"MEOOOW!".light_cyan
+        puts"These cats were freaks of nature. Irregular creatures. And once they were".light_cyan
+        puts"put outside, they sided with the walking sharks. DON'T ASK ME ABOUT".light_cyan
+        puts"THE SHARKS, OK?!".light_cyan
+        gets
+        system("clear")
+        puts"So off the Dodos went, beating the snot out of them, until the Supreme".light_cyan
+        puts"Dodo Leader (SDL) disappeared! Oh no!".light_cyan
+        puts"So this story is about a silly human and a greedy D.o.d.o, ok?!".light_cyan
+        gets
+        system("clear")
+puts"
+One day, Natie sat in his chair, perfectly molded to his size(Whatever
+that means).
+Then, a jolly dog WALKED DOWN THE DARN STREET?!
+'Ok, weird' mumbled a Natie.
+Then the dog WALKED by his door, stopped, and grinned like a cave
+fish.(Please don't google it you will be horrified.) He knocked on
+Natie's door. Natie opened the door and said, 'Why hello there, are you a lost dog looking for a home, because I can-'
+'WELL DOOOODO! HERE IS A SIGHT PLEASANT TO ME EARS!' said the walking dog.
+'Uh, yeah. What do you want, fish or-'
+'WELL DOOOOODO! YOU JUST READ MY MIND! COOK ME SOME YUMMY FRENCH PHEASANT, OH, BY THE WAY I AM BOODO.'
+said the 'Dodo'".light_cyan
+gets
+system("clear")
+puts"
+'Uhm...I don't have any phe-'
+'YOU
+BETTER NOT TELL ME YOU GOT NO PHEASANT...' said Boodo
+'Well, I do but it is for-'".light_cyan
+    gets
+    system("clear")
+    puts"
+'WHERE IS IT!!!!' shrieked Boodo, sounding like nails on a chalkboard.
+'Over here,' said Natie
+'OHHHHH! Boodo GETS IT! YOU WANT ME TO GET MY DODO FRIENDS!' 
+'Uhhh,' said Natie
+'AHA! A TELL-THE-PHONE-WHAT'S-UP!' said Boodo
+'Um, yeah.'
+'YOOOO YOYO WANNA COME HANG?(pause for a minute)OHH! YES THAT IS THE PLACE!
+COME ON OVER!'
+'Look, I don't want you in my hou-'
+said Natie
+'ALL I SEES IS A PHEASANT.(Sounds of happy munching) OH! YOYO IS HERE!'
+".light_cyan
+gets
+system("clear")
+puts"
+“YOOO BODO! WUZZUP!' said Yoyo
+'OH! NOT MUCH...OH! TICKLE MY BELLY I ALMOST FORGETS I FOUND THIS WEIRD
+GUY WHO SAYS WE GET HIS STUFF FOR FREE!' said Boodo.
+'YAYSERS!' said Yoyo.
+Then suddenly, as fast as lightning Yoyo pulled out a Desert Eagle pistol
+and shot a bullet out the window. It hit a muscley thing.
+'STUPID CATS! THEY PROBABLY FOLLOWED ME HERE!' said Yoyo.
+'TO THE OUTHOUSE! HURRY!' said Boodo. They went out of the house and went into an outhouse bathroom. Then, Boodo said, 'GET IN THE
+TOILET.'
+'Uh...'
+said Natie
+'GET IN!!' shrieked Yoyo, pointing his pistol at Natie.
+'OK OK!' said Natie.
+'TORPEDO TUBE READY YOYO' said Boodo.
+And they flushed him down the tube.".light_cyan
+        puts"Would you like to read more? y/n"
+        input = gets
+        if input == "y\n"
+            chapter = 2
+        end
+    end
+    if chapter == 2
+        system("clear")
+        puts"Chapter 2".light_cyan
+        puts"Yoyo".light_cyan
+        puts"………………………".light_cyan
+        puts"Natie went down into a cozy room. The toilet was locked up, probably so they didn't have".light_cyan
+        puts"anything nasty in the room. 'WELL DOOOOODO! DO YOU LIKE IT?' said Boodo.".light_cyan
+        puts"'Why are you so loud?' said Natie, wondering this for hours.".light_cyan
+        puts"'SO THE CATS KNOW WHERE WE ARE AND RUN,' grinned Boodo, doing the cavefish smile.".light_cyan
+        puts"'I guess that that is a good reason,' said Natie.".light_cyan
+        puts"Suddenly, the toilet flushed.".light_cyan
+        puts"'GET AWAY!' yelled Yoyo. He got under the toilet and shot up the pipe with his Desert Eagle Pistol. A dead muscled cat fell down.".light_cyan
+        puts"'THESE CATS HAVE NO MANNERS!' said Yoyo. ".light_cyan
+        puts"'YOU GOTTA PUMP THEM FULLA LEAD BEFORE THEY ARE SORRY.' said Boodo.".light_cyan
+        puts"'CLEAN UP THE MESS, SOSO,' said Yoyo.".light_cyan
+        puts"An old dog came in wheeling a cart full of supplies. He mopped up the cat.".light_cyan
+        puts"‘Why is all this stuff happening?’ asked Natie.".light_cyan
+        puts"Yoyo and Boodo looked at each other. ".light_cyan
+        puts"‘SHOULD WE TELL HIM?’ said Boodo, smiling like that cave fish.".light_cyan
+        puts"‘YES. HE DOES LIVE WITH US NOW,’ shrieked Yoyo, ‘OK. BASICALLY WE ARE MUTANT DOGS AND WE GOTTA GET THESE CATS, BUT THEY WANNA KILL US.‘".light_cyan
+        puts"‘Ok, then, why don’t we attack their base?’ said Natie.".light_cyan
+        puts"‘BECAUSE, UH, WE DON’T KNOW WHERE THEY ARE,’ said Boodo.".light_cyan
+        puts"‘Just look at this note he left. It says ‘NEW BASE: BOODO HOTEL,’  said Natie.".light_cyan
+        puts"‘MY OTHER BASE!’ screamed Boodo. ‘I LEAVE IT FOR OOOOOONE SECOND AND THOSE FILTHY, ROTTEN, GRIMY CATS TAKE IT.’".light_cyan
+        puts"‘LET’S GET THOSE CATS.’ said Yoyo.".light_cyan
+        puts"Would you like to read more? y/n"
+        input = gets
+        puts"To read more, please download the book ar R-box.pages.dev/products"
+    end
+    if chapter == 3
+        puts""
+    end
+    end
+    if input == "bible.backandforth\n"
+        system("clear")
+        puts"Chapter 1".blue
+        sleep(0.2)
+        puts"God creates the Earth. God gives dominion to men over fish, plants, birds, and all other beasts.".blue
+        sleep(0.2)
+        puts"In the beginning, God created the heavens and the earth.".blue
+        sleep(0.2)
+        puts"And the earth was formless and empty; and darkness was over the deep. And the Spirit of God hovered over the waters.".blue
+        sleep(0.2)
+        puts"And God said: Let there be light, and there was light.".blue
+        sleep(0.2)
+        puts"And God saw the light that it was good, and God separated the light from the darkness.".blue
+        sleep(0.2)
+        puts"And God called the light Day and the darkness Night. And the sun rose, and it was the first day.".blue
+        sleep(0.2)
+        puts"And God said, Let there be a sky in the midst of the waters, and let it separate water from water.".blue
+        sleep(0.2)
+        gets
+        system("clear")
+        puts"And God created the sky, and separated the water that was under the sky from the water that was above the sky: and it was so.".blue
+        sleep(0.2)
+        puts"And God called the sky heaven. And it was the morning of the second day.".blue
+        sleep(0.2)
+        puts"And God said, 'Let the water that is under the sky be gathered into one place, and let the dry land appear.' And so it became.".blue
+        sleep(0.2)
+        puts"And God called the dry land Earth; and the meeting of the waters called them seas, and God saw that it was good.".blue
+        sleep(0.2)
+        puts"And God said, 'Let the earth bring forth grass, grass yielding seed,\nand fruitful trees bearing fruit according to its kind, in which is its seed on the earth; and it became so.'".blue
+        sleep(0.2)
+        puts"And the earth brought forth grass, and grass yielding seed, according to its kind,\nand tree yielding fruit, in which is its seed, according to its kind,' and God saw that it was good.".blue
+        sleep(0.2)
+        puts"And it was evening and morning of the third day.".blue
+        sleep(0.2)
+        puts"And God said 'Let there be lights in the sky of the heaven to separate the day from the night; and let them be for signs, and times, and days, and years:".blue
+        sleep(0.2)
+        puts"And let them be lamps in the sky of heaven to give light on the earth,' and it was so.".blue
+        sleep(0.2)
+        puts"And God created two great lights; a greater light to rule the day, and a lesser light to rule the night; and He created the stars.".blue
+        sleep(0.2)
+        gets
+        system("clear")
+        puts"And God placed them in the sky of heaven to give light to the earth,".blue
+        sleep(0.2)
+        puts"And to rule the day and the night, and to separate the light from the darkness: and God saw that it was good.".blue
+        sleep(0.2)
+        puts"And it was evening and morning of the fourth day.".blue
+        sleep(0.2)
+        puts"And God said, 'Let the waters bring forth abundantly the living creatures\n that move and have life, and the birds that can fly over the earth in the open expanse of the sky.'".blue
+        sleep(0.2)
+        puts"And God created the great fish and every living thing that moves\nthat the waters brought forth according to their kinds, and every bird according to its kind, and God saw that it was good.".blue
+        sleep(0.2)
+        puts"And God blessed them, saying, 'Be fruitful and multiply, and fill the waters of the seas, and let birds multiply on the earth.'".blue
+        sleep(0.2)
+        puts"And it was evening and morning of the fifth day.".blue
+        gets
+        system("clear")
+        sleep(0.2)
+        puts"And God said, 'Let the earth produce living creatures according to their kinds,\ livestock and creeping things, and wild beasts of the earth according to their kinds,' and it became so.".blue
+        sleep(0.2)
+        puts"And God created the beasts of the earth according to their kinds,\nand the cattle according to their kinds, and everything that moves on the earth according to its kind, and God saw that it was good.".blue
+        sleep(0.2)
+        puts"And God said  'Let us make man in our image and after our likeness,\nand let them have dominion over the fish of the sea, and over the birds of the air, and over the cattle, and over all the earth, and over all the creeping things that crawl on the earth.'".blue
+        sleep(0.2)
+        puts"And God created man in His own image, in the image of God He created him; male and female he created them.".blue
+        sleep(0.2)
+        puts"And God blessed them, and God said to them 'Be fruitful and multiply,\nand fill the earth and subdue it, and have dominion over the fish of the sea, and over the birds of the air, and over every living creature that moves on the earth.'".blue
+        sleep(0.2)
+        puts"And God said, 'Behold, I have given you every herb yielding seed that\nis on all the earth, and every tree that has fruit yielding seed; it will be food for you.".blue
+        sleep(0.2)
+        puts"And to every beast of the earth, and to every bird of the air, and\nto everything that creeps on the earth, in which there is life, I gave every green herb for food,' and it was so.".blue
+        sleep(0.2)
+        puts"And God saw everything that He had created, and behold,\nit was very good. And it was evening and morning on the sixth day.".blue
+        gets
+        system("clear")
+    end
+    if input == "1\n"
+        puts"NEW STORIES: Back&forth (SST) bible (Type bible.backandforth)"
+        sleep(0.2)
+        puts"STORIES ABOUT ANIMALS:"
+        sleep(0.2)
+        puts"The Capybara (Type story.capybara)"
+        puts"NOVELS"
+        sleep(0.2)
+        puts"Dodo and Nathan part one (Type novel.natie)"
+        sleep(0.2)
+        puts"CHOOSE YOUR OWN ADVENTURE:"
+        sleep(0.2)
+        puts"Tundra Treasure (Type cyoa.tundra)"
+    end
+end
+     

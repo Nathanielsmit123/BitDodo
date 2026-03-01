@@ -1,0 +1,1060 @@
+#!/usr/bin/ruby 
+require 'colorize'
+diseases_caused_by_pace = ["Fever", "Exaustion"]
+$diseases_caused_by_rations = ["Scurvy","Cholera","Dysentery"]
+usernameline = 2
+$j = $diseases_caused_by_rations.sample
+nameline = 1
+system('ls')
+$actualname = IO.readlines('./account.txt')[usernameline-1]
+username = IO.readlines('./account.txt')[nameline-1]
+$names = ["JOHN","BOB","FRED","JOE","NOAH"]
+# Stats:
+myarray = ["Now with diseases!","Version 2.0!","Go to Oregon!", "You did it!"]
+$food= 0 
+$money = 0
+$timer = 0
+miles = 0 
+$oxen = 0
+$occupation = ""
+axles = 0
+tongues = 0
+m = myarray.sample
+wheels = 0
+$animals = ["Rabbit", "Deer", "Bison", "Rabbit", "Chipmonk", "Duck", "Wolf"]
+$guns = 0
+$animalgender = ["He", "She"] 
+$gender = $animalgender.sample
+$animal = $animals.sample
+$bullets = 0
+$meat = 0
+$deathtimer = 0
+system("clear")
+puts"
+ ____       ____   ___   _    _ 
+|  _ \\     | __ ) / _ \\  \\\\  //
+| |_) |____|  _ \\| | | |  \\\\// 
+|  _ <_____| |_) | |_| |  //\\\\
+|_| \\_\\    |____/ \\___/  //  \\\\".red       
+print"Presents..."
+sleep(3)
+system("clear")
+puts""
+print" ____       _____                  _   _ \n".blue
+print"|  _ \\     |_   _| _ __     __ _  (_) | |\n".blue
+print"| |_) |      | |   | '__|  / _` | | | | |\n".blue
+print"|  _ <       | |   | |    | (_| | | | | |\n".blue
+print"|_| \\_\\      |_|   |_|     \\__,_| |_| |_|\n".blue
+print m
+sleep(3)
+"\nWelcome, ".each_char {|c| putc c ; sleep 0.1
+; $stdout.flush }
+print $actualname
+". Press one for Banker or two for Farmer ".each_char {|c| putc c ; sleep 0.1; $stdout.flush }
+input = gets
+input = input.to_i
+if input == 2
+    $occupation = "farmer"
+    $money = 1000
+end
+if input == 1
+    $occupation = "banker"
+    $money = 4000
+end
+"You have $".each_char {|c| putc c ; sleep 0.1
+; $stdout.flush }
+print $money
+class Oxen
+    def initialize
+        @a = $names.sample
+        @miles = 0
+        @string1 = ["yes","yes","yes","yes","yes","no","no","no","no","no","no","no","no","no","no"]
+        @string = ["yes","yes","no","no","no","no","no","no","no","no","no","no"]
+        @string_thing = ["yes","no","no","no","no","no","no","no","no","no","no","no"]
+        @injuries = ["Measles", "Chicken pox", "Typhoid fever","Broken leg", "Broken arm", "Snakebite", "a sick ox"]
+    end
+    def move(miles_to_go, next_destionation)
+        loop do
+            system("clear")
+            print"#################"
+            print"           __n__n__\n".black
+            print"#################"
+            print"----".yellow
+            print".------`-\\00/-'\n".black
+            print"#################"
+            print"   /  ##  ## (oo)\n".black
+            print"%%%%%%%%%%%%%%%%%".blue
+            print"  /\\## __   ./\n".black
+            print"%%".blue
+            print"==".yellow
+            print"%%%%%%%%".blue
+            print"===".yellow
+            print"%%".blue
+            print"     |//   \\|/\n".black
+            print" =====     =====".yellow
+            print"      |_|   |_|   \n".black  
+            print"  ===       ===".yellow
+            print"       |_/   |_/ \n".black
+            print"-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#\n".green
+            puts"Miles traveled: " + @miles.to_s
+            puts"Going to: " + next_destionation
+            puts"Food: " + $food.to_s
+            @miles =@miles + 0.5
+            if $food.to_f < 1
+                puts"You have " + $j.to_s
+                sleep(5)
+                puts"You died of " + $j.to_s
+                system("clear")
+                puts"Here lies " + $actualname
+                puts"Didn't get that far! -"+$actualname
+                exit
+            end
+            sleep(0.5)
+            system("clear")
+            print"#################"
+            print"           __n__n__\n".black
+            print"#################"
+            print"----".yellow
+            print".------`-\\00/-'\n".black
+            print"#################"
+            print"   /  ##  ## (oo)\n".black
+            print"%%%%%%%%%%%%%%%%%".blue
+            print"  /\\## __   ./\n".black
+            print"%%".blue
+            print"==".yellow
+            print"%%%%%%%%".blue
+            print"===".yellow
+            print"%%".blue
+            print"     |//   \\|/\n".black
+            print" =====     =====".yellow
+            print"       |_\\   |_\\   \n".black  
+            print"  ===       ===".yellow
+            print"         |_/   |_/ \n".black
+            print"-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#\n".green
+            puts"Miles traveled: " + @miles.to_s
+            puts"Going to: " + next_destionation
+            puts"Food: " + $food.to_s
+
+
+            @miles += 1
+            if $food.to_f < 1
+                puts"You have " + $j.to_s
+                sleep(5)
+                puts"You died of " + $j
+                system("clear")
+                puts"Here lies " + $actualname
+                puts"Didn't get that far! -"+$actualname
+                exit
+            end
+            sleep(0.5)
+            system("clear")
+            print"#################"
+            print"           __n__n__\n".black
+            print"#################"
+            print"----".yellow
+            print".------`-\\00/-'\n".black
+            print"#################"
+            print"   /  ##  ## (oo)\n".black
+            print"%%%%%%%%%%%%%%%%%".blue
+            print"  /\\## __   ./\n".black
+            print"%%".blue
+            print"==".yellow
+            print"%%%%%%%%".blue
+            print"===".yellow
+            print"%%".blue
+            print"     |//   \\|/\n".black
+            print" =====     =====".yellow
+            print"       |_\\   |_\\   \n".black  
+            print"  ===       ===".yellow
+            print"        |_/   |_/ \n".black
+            print"-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#\n".green
+            puts"Miles traveled: " + @miles.to_s
+            puts"Going to: " + next_destionation
+            puts"Food: " + $food.to_s
+
+            @miles += 1
+            if $food.to_f < 1
+                puts"You have " + $j.to_s
+                sleep(5)
+                puts"You died of " + $j
+                system("clear")
+                puts"Here lies " + $actualname
+                puts"Didn't get that far! -"+$actualname
+                exit
+            end
+            sleep(0.5)
+            system("clear")
+            print"#################"
+            print"           __n__n__\n".black
+            print"#################"
+            print"----".yellow
+            print".------`-\\00/-'\n".black
+            print"#################"
+            print"   /  ##  ## (oo)\n".black
+            print"%%%%%%%%%%%%%%%%%".blue
+            print"  /\\## __   ./\n".black
+            print"%%".blue
+            print"==".yellow
+            print"%%%%%%%%".blue
+            print"===".yellow
+            print"%%".blue
+            print"     |//   \\|/\n".black
+            print" =====     =====".yellow
+            print"       |_\\   |_\\   \n".black  
+            print"  ===       ===".yellow
+            print"         |_/   |_/ \n".black
+            print"-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#\n".green
+            puts"Miles traveled: " + @miles.to_s
+            puts"Going to: " + next_destionation
+            puts"Food: " + $food.to_s
+
+
+            @miles += 1
+            if $food.to_f < 1
+                puts"You have " + $j.to_s
+                sleep(5)
+                puts"You died of " + $j
+                system("clear")
+                puts"Here lies " + $actualname
+                puts"Didn't get that far! -"+$actualname
+                exit
+            end
+            sleep(0.5)
+            system("clear")
+            print"#################"
+            print"           __n__n__\n".black
+            print"#################"
+            print"----".yellow
+            print".------`-\\00/-'\n".black
+            print"#################"
+            print"   /  ##  ## (oo)\n".black
+            print"%%%%%%%%%%%%%%%%%".blue
+            print"  /\\## __   ./\n".black
+            print"%%".blue
+            print"==".yellow
+            print"%%%%%%%%".blue
+            print"===".yellow
+            print"%%".blue
+            print"     |//   \\|/\n".black
+            print" =====     =====".yellow
+            print"       |_\\   |_\\   \n".black  
+            print"  ===       ===".yellow
+            print"        |_/   |_/ \n".black
+            print"-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#\n".green
+            puts"Miles traveled: " + @miles.to_s
+            puts"Going to: " + next_destionation
+            puts"Food: " + $food.to_s
+
+            @miles += 1
+            if $food.to_f < 1
+                puts"You have " + $j.to_s
+                sleep(5)
+                puts"You died of " + $j
+                system("clear")
+                puts"Here lies " + $actualname
+                puts"Didn't get that far! -"+$actualname
+                exit
+            end
+            sleep(0.5)
+            system("clear")
+            print"#################"
+            print"           __n__n__\n".black
+            print"#################"
+            print"----".yellow
+            print".------`-\\00/-'\n".black
+            print"#################"
+            print"   /  ##  ## (oo)\n".black
+            print"%%%%%%%%%%%%%%%%%".blue
+            print"  /\\## __   ./\n".black
+            print"%%".blue
+            print"==".yellow
+            print"%%%%%%%%".blue
+            print"===".yellow
+            print"%%".blue
+            print"     |//   \\|/\n".black
+            print" =====     =====".yellow
+            print"       |_\\   |_\\   \n".black  
+            print"  ===       ===".yellow
+            print"         |_/   |_/ \n".black
+            print"-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#\n".green
+            puts"Miles traveled: " + @miles.to_s
+            puts"Going to: " + next_destionation
+            puts"Food: " + $food.to_s
+
+
+            @miles += 1
+            if $food.to_f < 1
+                puts"You have " + $j.to_s
+                sleep(5)
+                puts"You died of " + $j
+                system("clear")
+                puts"Here lies " + $actualname
+                puts"Didn't get that far! -"+$actualname
+                exit
+            end
+            sleep(0.5)
+            system("clear")
+            print"#################"
+            print"           __n__n__\n".black
+            print"#################"
+            print"----".yellow
+            print".------`-\\00/-'\n".black
+            print"#################"
+            print"   /  ##  ## (oo)\n".black
+            print"%%%%%%%%%%%%%%%%%".blue
+            print"  /\\## __   ./\n".black
+            print"%%".blue
+            print"==".yellow
+            print"%%%%%%%%".blue
+            print"===".yellow
+            print"%%".blue
+            print"     |//   \\|/\n".black
+            print" =====     =====".yellow
+            print"       |_\\   |_\\   \n".black  
+            print"  ===       ===".yellow
+            print"        |_/   |_/ \n".black
+            print"-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#\n".green
+            puts"Miles traveled: " + @miles.to_s
+            puts"Going to: " + next_destionation
+            puts"Food: " + $food.to_s
+
+            @miles += 1
+            if $food.to_f < 1
+                puts"You have " + $j.to_s
+                sleep(5)
+                puts"You died of " + $j
+                system("clear")
+                puts"Here lies " + $actualname
+                puts"Didn't get that far! -"+$actualname
+                exit
+            end
+            sleep(0.5)
+            system("clear")
+            print"#################"
+            print"           __n__n__\n".black
+            print"#################"
+            print"----".yellow
+            print".------`-\\00/-'\n".black
+            print"#################"
+            print"   /  ##  ## (oo)\n".black
+            print"%%%%%%%%%%%%%%%%%".blue
+            print"  /\\## __   ./\n".black
+            print"%%".blue
+            print"==".yellow
+            print"%%%%%%%%".blue
+            print"===".yellow
+            print"%%".blue
+            print"     |//   \\|/\n".black
+            print" =====     =====".yellow
+            print"      |_|   |_|   \n".black  
+            print"  ===       ===".yellow
+            print"       |_/   |_/ \n".black
+            print"-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#\n".green
+            puts"Miles traveled: " + @miles.to_s
+            puts"Going to: " + next_destionation
+            puts"Food: " + $food.to_s
+
+
+            @miles += 1
+            sleep(0.5)
+            system("clear")
+            print"#################"
+            print"           __n__n__\n".black
+            print"#################"
+            print"----".yellow
+            print".------`-\\00/-'\n".black
+            print"#################"
+            print"   /  ##  ## (oo)\n".black
+            print"%%%%%%%%%%%%%%%%%".blue
+            print"  /\\## __   ./\n".black
+            print"%%".blue
+            print"==".yellow
+            print"%%%%%%%%".blue
+            print"===".yellow
+            print"%%".blue
+            print"     |//   \\|/\n".black
+            print" =====     =====".yellow
+            print"      /_|   /_|   \n".black  
+            print"  ===       ===".yellow
+            print"      /_/   /_/ \n".black
+            print"-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#\n".green
+            puts"Miles traveled: " + @miles.to_s
+            puts"Going to: " + next_destionation
+            puts"Food: " + $food.to_s
+            if $food.to_f < 1
+                puts"You have " + $j.to_s
+                sleep(5)
+                puts"You died of " + $j
+                system("clear")
+                puts"Here lies " + $actualname
+                puts"Didn't get that far! -"+$actualname
+                exit
+            end
+            @miles += 1
+            sleep(0.5)
+            system("clear")
+            print"#################"
+            print"           __n__n__\n".black
+            print"#################"
+            print"----".yellow
+            print".------`-\\00/-'\n".black
+            print"#################"
+            print"   /  ##  ## (oo)\n".black
+            print"%%%%%%%%%%%%%%%%%".blue
+            print"  /\\## __   ./\n".black
+            print"%%".blue
+            print"===".yellow
+            print"%%%%%%%".blue
+            print"===".yellow
+            print"%%".blue
+            print"     |//   \\|/\n".black
+            print" =====     =====".yellow
+            print"     |_|   |_|   \n".black  
+            print"  ===       ===".yellow
+            print"      /_/   /_/ \n".black
+            print"-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#\n".green
+            puts"Miles traveled: " + @miles.to_s
+            puts"Going to: " + next_destionation
+            puts"Food: " + $food.to_s
+            d = @string_thing.sample
+            if d == "yes"
+                f = @injuries.sample
+                puts"You have " + f
+                puts"Resting..."
+                sleep(10)
+                $food.to_f
+                $food = $food.to_f - 30
+            end
+            if $food.to_f > 0
+                $food = $food.to_f - 10
+            end
+            if $food.to_f < 1
+                puts"You have " + $j.to_s
+                sleep(5)
+                puts"You died of " + $j
+                system("clear")
+                puts"Here lies " + $actualname
+                puts"Didn't get that far! -"+$actualname
+                exit
+            end
+            sleep(0.5)
+            system("clear")
+            @miles += 1
+            @miles.to_f
+            if @miles > miles_to_go
+                break
+            end
+            system("clear")
+            print"#################"
+            print"           __n__n__\n".black
+            print"#################"
+            print"----".yellow
+            print".------`-\\00/-'\n".black
+            print"#################"
+            print"   /  ##  ## (oo)\n".black
+            print"%%%%%%%%%%%%%%%%%".blue
+            print"  /\\## __   ./\n".black
+            print"%%".blue
+            print"==".yellow
+            print"%%%%%%%%".blue
+            print"===".yellow
+            print"%%".blue
+            print"     |//   \\|/\n".black
+            print" =====     =====".yellow
+            print"      |_|   |_|   \n".black  
+            print"  ===       ===".yellow
+            print"       |_/   |_/ \n".black
+            print"-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#\n".green
+            puts"Miles traveled: " + @miles.to_s
+            puts"Going to: " + next_destionation
+            puts"Food: " + $food.to_s
+            @miles =@miles + 0.5
+            if $food.to_f < 1
+                puts"You have " + $j.to_s
+                sleep(5)
+                puts"You died of " + $j.to_s
+                system("clear")
+                puts"Here lies " + $actualname
+                puts"Didn't get that far! -"+$actualname
+                exit
+            end
+            sleep(0.5)
+            system("clear")
+            print"#################"
+            print"           __n__n__\n".black
+            print"#################"
+            print"----".yellow
+            print".------`-\\00/-'\n".black
+            print"#################"
+            print"   /  ##  ## (oo)\n".black
+            print"%%%%%%%%%%%%%%%%%".blue
+            print"  /\\## __   ./\n".black
+            print"%%".blue
+            print"==".yellow
+            print"%%%%%%%%".blue
+            print"===".yellow
+            print"%%".blue
+            print"     |//   \\|/\n".black
+            print" =====     =====".yellow
+            print"       |_\\   |_\\   \n".black  
+            print"  ===       ===".yellow
+            print"         |_/   |_/ \n".black
+            print"-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#\n".green
+            puts"Miles traveled: " + @miles.to_s
+            puts"Going to: " + next_destionation
+            puts"Food: " + $food.to_s
+
+
+            @miles += 1
+            if $food.to_f < 1
+                puts"You have " + $j.to_s
+                sleep(5)
+                puts"You died of " + $j
+                system("clear")
+                puts"Here lies " + $actualname
+                puts"Didn't get that far! -"+$actualname
+                exit
+            end
+            sleep(0.5)
+            system("clear")
+            print"#################"
+            print"           __n__n__\n".black
+            print"#################"
+            print"----".yellow
+            print".------`-\\00/-'\n".black
+            print"#################"
+            print"   /  ##  ## (oo)\n".black
+            print"%%%%%%%%%%%%%%%%%".blue
+            print"  /\\## __   ./\n".black
+            print"%%".blue
+            print"==".yellow
+            print"%%%%%%%%".blue
+            print"===".yellow
+            print"%%".blue
+            print"     |//   \\|/\n".black
+            print" =====     =====".yellow
+            print"       |_\\   |_\\   \n".black  
+            print"  ===       ===".yellow
+            print"        |_/   |_/ \n".black
+            print"-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#\n".green
+            puts"Miles traveled: " + @miles.to_s
+            puts"Going to: " + next_destionation
+            puts"Food: " + $food.to_s
+
+            @miles += 1
+            if $food.to_f < 1
+                puts"You have " + $j.to_s
+                sleep(5)
+                puts"You died of " + $j
+                system("clear")
+                puts"Here lies " + $actualname
+                puts"Didn't get that far! -"+$actualname
+                exit
+            end
+            sleep(0.5)
+            system("clear")
+            print"#################"
+            print"           __n__n__\n".black
+            print"#################"
+            print"----".yellow
+            print".------`-\\00/-'\n".black
+            print"#################"
+            print"   /  ##  ## (oo)\n".black
+            print"%%%%%%%%%%%%%%%%%".blue
+            print"  /\\## __   ./\n".black
+            print"%%".blue
+            print"==".yellow
+            print"%%%%%%%%".blue
+            print"===".yellow
+            print"%%".blue
+            print"     |//   \\|/\n".black
+            print" =====     =====".yellow
+            print"      |_|   |_|   \n".black  
+            print"  ===       ===".yellow
+            print"       |_/   |_/ \n".black
+            print"-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#\n".green
+            puts"Miles traveled: " + @miles.to_s
+            puts"Going to: " + next_destionation
+            puts"Food: " + $food.to_s
+
+
+            @miles += 1
+            sleep(0.5)
+            system("clear")
+            print"#################"
+            print"           __n__n__\n".black
+            print"#################"
+            print"----".yellow
+            print".------`-\\00/-'\n".black
+            print"#################"
+            print"   /  ##  ## (oo)\n".black
+            print"%%%%%%%%%%%%%%%%%".blue
+            print"  /\\## __   ./\n".black
+            print"%%".blue
+            print"==".yellow
+            print"%%%%%%%%".blue
+            print"===".yellow
+            print"%%".blue
+            print"     |//   \\|/\n".black
+            print" =====     =====".yellow
+            print"      /_|   /_|   \n".black  
+            print"  ===       ===".yellow
+            print"      /_/   /_/ \n".black
+            print"-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#\n".green
+            puts"Miles traveled: " + @miles.to_s
+            puts"Going to: " + next_destionation
+            puts"Food: " + $food.to_s
+            if $food.to_f < 1
+                puts"You have " + $j.to_s
+                sleep(5)
+                puts"You died of " + $j
+                system("clear")
+                puts"Here lies " + $actualname
+                puts"Didn't get that far! -"+$actualname
+                exit
+            end
+            @miles += 1
+            sleep(0.5)
+            system("clear")
+            print"#################"
+            print"           __n__n__\n".black
+            print"#################"
+            print"----".yellow
+            print".------`-\\00/-'\n".black
+            print"#################"
+            print"   /  ##  ## (oo)\n".black
+            print"%%%%%%%%%%%%%%%%%".blue
+            print"  /\\## __   ./\n".black
+            print"%%".blue
+            print"===".yellow
+            print"%%%%%%%".blue
+            print"===".yellow
+            print"%%".blue
+            print"     |//   \\|/\n".black
+            print" =====     =====".yellow
+            print"     |_|   |_|   \n".black  
+            print"  ===       ===".yellow
+            print"      /_/   /_/ \n".black
+            print"-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#\n".green
+            puts"Miles traveled: " + @miles.to_s
+            puts"Going to: " + next_destionation
+            puts"Food: " + $food.to_s
+            if $food < 1000
+                puts"Press y to hunt or press enter to not hunt"
+                inputthing = gets.chomp!
+                if inputthing
+                    puts""
+                end
+            end
+            d = @string_thing.sample
+            if d == "yes"
+                f = @injuries.sample
+                puts"You have " + f
+                puts"Resting..."
+                sleep(10)
+                $food.to_f
+                $food = $food.to_f - 30
+                system("clear")
+            end
+            if $food.to_f > 0
+                $food = $food.to_f - 10
+            end
+            if $food.to_f < 1
+                puts"You have " + $j.to_s
+                sleep(5)
+                puts"You died of " + $j
+                system("clear")
+                puts"Here lies " + $actualname
+                puts"Didn't get that far! -"+$actualname
+                exit
+            end
+            sleep(0.5)
+            system("clear")
+            @miles += 1
+            @miles.to_f
+            if @miles > miles_to_go
+                break
+            end
+        end
+    end
+    def river(rivername)
+        loop do
+            $j = $diseases_caused_by_rations.sample
+            system("clear")
+            print"You are now at " + rivername
+            puts" \nPause game? hit y to pause"
+            if gets.chomp == "y"
+                self.pause_game
+            end
+            print " \nWhat will you do?\n"
+            "1. Ford\n2. Caulk\n3. Ferry(costs $20) ".each_char {|c| putc c ; sleep 0.1; $stdout.flush }
+            input = gets.chomp
+            if input == "1"
+                system("clear")
+                puts"Fording..."
+                b = @string1.sample
+                sleep(2)
+                if b == "yes"
+                    "You lost: 1 oxen (Drowned) \nand 100 pounds of food (Floated away)".each_char {|c| putc c ; sleep 0.1; $stdout.flush }
+                    $food = $food.to_f
+                    $food = $food.to_f - 100
+                    $oxen = $oxen.to_f
+                    $oxen = oxen - 1
+                    sleep(1)
+                    break
+                end
+                if b == "no"
+                    puts"You have succesfuly forded the river.".each_char {|c| putc c ; sleep 0.1; $stdout.flush }
+                    sleep(1)
+                    break
+                end
+            end
+            if input == "2"
+                system("clear")
+                puts"Caulking..."
+                sleep(1)
+                puts"Crossing..."
+                sleep(1)
+                c = @string.sample
+                if c == "yes"
+                    puts"You lost: 1 oxen (Drowned) \nand 200 pounds of food (Floated away)".each_char {|c| putc c ; sleep 0.1; $stdout.flush }
+                    $food = $food.to_f
+                    $food = $food - 200
+                    $oxen = $oxen.to_f
+                    $oxen = $oxen - 1
+                    sleep(1)
+                    break
+                end
+                if c == "no"
+                    "".each_char {|c| putc c ; sleep 0.1}
+                    break
+                end
+            end
+            if input == "3"
+                puts"Crossing the river..."
+                sleep(2)
+                "You have succsessfuly ferried across.".each_char {|c| putc c ; sleep 0.1; $stdout.flush }
+                $money = $money.to_f
+                $money = $money - 20
+                sleep(2)
+                break
+            end
+        end
+    end
+    def fort
+        loop do
+            print"\n"
+            print @a + ":"
+            " Hello, how much food? $0.25 per pound. \n".each_char {|c| putc c ; sleep 0.1; $stdout.flush }
+            puts"Your money: " + $money.to_s
+            input = gets
+            $food = $food += input.to_f
+            $money = $money - input.to_f * 0.25
+            if $food.to_f > 2000
+                print @a+":"
+                "Too much food! 2000 is the max!".each_char {|c| putc c ; sleep 0.1; $stdout.flush }
+            end
+            if $money.to_f < 0
+                puts @a +":"
+                "You ran out of money!".each_char {|c| putc c ; sleep 0.1; $stdout.flush }
+                $food = 0
+                exit
+            end
+            "How many bullets? $0.5 each. \n".each_char {|c| putc c ; sleep 0.1; $stdout.flush }
+                puts"Your money: " + $money.to_s
+                input = gets
+                input.to_f
+                $bullets = $bullets += input.to_f
+                input.to_f
+                $money = $money - input.to_f * 0.5
+                if input.to_f > 100
+                    print @a+":"
+                    "Too many bullets! 100 is the max!".each_char {|c| putc c ; sleep 0.1; $stdout.flush }
+                end
+                if $money.to_f < 0
+                    puts @a +":"
+                    "You ran out of money!".each_char {|c| putc c ; sleep 0.1; $stdout.flush }
+                    $bullets = 0
+                    exit
+                end
+                if $oxen != 0
+                    puts" \nPause game? hit y to pause"
+                    if gets.chomp == "y"
+                        self.pause_game
+                    end
+                    break
+                end
+            if $oxen < 1
+                "How many oxen? $100 each. \n".each_char {|c| putc c ; sleep 0.1; $stdout.flush }
+                puts"Your money: " + $money.to_s
+                puts" "
+                input = gets
+                input.to_f
+                $oxen = $oxen += input.to_f
+                input.to_f
+                $money = $money - input.to_f * 100
+                if input.to_f > 10
+                    print @a+":"
+                    "Too many oxen! 10 is the max!".each_char {|c| putc c ; sleep 0.1; $stdout.flush }
+                    exit
+                end
+                if $money.to_f < 0
+                    puts @a +":"
+                    "You ran out of money!".each_char {|c| putc c ; sleep 0.1; $stdout.flush }
+                    $oxen = 0
+                    exit
+                end
+                break
+            end
+        end
+    end
+    def landmark(nameoflandmark)
+         "You have arrived at ".each_char {|c| putc c ; sleep 0.1; $stdout.flush }
+         print nameoflandmark + "."
+         sleep(2)
+         puts" \nPause game? hit y to pause"
+         if gets.chomp == "y"
+             self.pause_game
+         end
+    end
+    def check_for_oxen
+        if $oxen == 0
+            puts"No more oxen."
+            system("clear")
+            puts"Here lies " + $actualname
+            puts"No oxen, no me...I starved..."
+            exit
+        end
+    end
+    def the_dalles
+        puts" \nPause game? hit y to pause"
+        if gets.chomp == "y"
+            self.pause_game
+        end
+        "(Type the number) Choose either: \n1. Go down the Columbia River\n2. Use the Barlow Toll road".each_char {|c| putc c ; sleep 0.1
+; $stdout.flush }
+        input = gets
+        input.to_i
+        p input
+        if input.to_i == 1
+            g = @string.sample
+            puts"Going down the river..."
+            sleep(2)
+            if g == "yes"
+                "You hit a rock! You lost: 1 oxen, and 300 pounds of food".each_char {|c| putc c ; sleep 0.1
+; $stdout.flush }
+                puts"You made it!\n"
+                sleep(0.1)
+                print"Oxen: " 
+                sleep(0.1)
+                print $oxen.to_s
+                sleep(0.1)
+                print"\n"
+                print "Food: " 
+                sleep(0.1)
+                print $food.to_s
+                print"\n"
+                sleep(0.1)
+                print"Money: " 
+                sleep(0.1)
+                print $money.to_s
+                print"\n"
+                sleep(0.1)
+                points = $oxen.to_i + $food.to_i + $money.to_i
+                print"Total points: " + points.to_s
+                sleep(0.1)
+                exit
+            end
+            puts"You made it without crashing!\n"
+            sleep(0.1)
+            print"Oxen: " 
+            sleep(0.1)
+            print $oxen.to_s
+            sleep(0.1)
+            print"\n"
+            print "Food: " 
+            sleep(0.1)
+            print $food.to_s
+            print"\n"
+            sleep(0.1)
+            print"Money: " 
+            sleep(0.1)
+            print $money.to_s
+            print"\n"
+            sleep(0.1)
+            points = $oxen.to_i + $food.to_i + $money.to_i
+            print"Total points: " + points.to_s
+            sleep(0.1)
+            exit
+        end
+        if input.to_i == 2
+            self.move(750,"Oregon City")
+            puts"You made it without crashing!\n"
+            sleep(0.1)
+            print"Oxen: " 
+            sleep(0.1)
+            print $oxen.to_s
+            sleep(0.1)
+            print"\n"
+            print "Food: " 
+            sleep(0.1)
+            print $food.to_s
+            print"\n"
+            sleep(0.1)
+            print"Money: " 
+            sleep(0.1)
+            print $money.to_s
+            print"\n"
+            sleep(0.1)
+            if $occupation == "farmer"
+                points = $oxen.to_f + $food.to_f + $money.to_f
+                points = points * 2
+                print"For being a farmer, 2x points. \nTotal points: " + points.to_s
+                sleep(3)
+                exit
+            end
+            if $occupation == "banker"
+                points = $oxen.to_f + $food.to_f + $money.to_f
+                print"Total points: " + points.to_s
+                sleep(3)
+                exit
+            end
+        end
+    end
+    def hunt
+        $deathtimer = 0
+        loop do
+            if $bullets == 0
+                puts "No bullets! You wanna get eaten? Geez!"
+                break
+            end
+            if $bullets != 0
+                puts "Ready?"
+                input = gets
+                puts "You see a " + $animal
+                if $animal != "Bison" && $animal != "Wolf"
+                    puts"Hurry! hit enter!"
+                    $deathtimer += 0.5
+                    gets
+                    if $deathtimer > 2.5
+                        puts"Too slow! It got away!"
+                        break
+                    end
+                    if $deathtimer < 2.5
+                        puts"BAM!"
+                        $bullets -= 1
+                        sleep(0.5)
+                        puts"You got it!"
+                        if $animal.to_s == "Duck" || $animal.to_s == "Rabbit"
+                            $meat == 20
+                            sleep(0.5)
+                            puts"You have a total of 20 pounds of meat!" 
+                            $food += $meat
+                            break
+                        end
+                        if $animal.to_s == "Duck" || $animal.to_s == "Rabbit"
+                            $meat == 20
+                            sleep(0.5)
+                            puts"You have a total of 20 pounds of meat!" 
+                            $food += $meat
+                            break
+                        end
+                        if $animal.to_s == "Chipmonk"
+                            $meat == 1
+                            sleep(0.5)
+                            puts"You have a total of 1 pound of meat!" 
+                            $food += $meat
+                            break
+                        end
+                        if $animal.to_s == "Deer"
+                            $meat == 100
+                            puts"You have a total of 100 pound of meat!" 
+                            $food += $meat
+                            break
+                        end
+                    end
+                end
+                if $animal == "Bison" 
+                    puts $gender + " is charging you! Type anything to shoot!"
+                    $deathtimer += 1
+                    input = gets
+                    if $deathtimer > 2
+                        puts"Too slow! You are dead!"
+                        exit
+                    end
+                    if $deathtimer != 2
+                        puts"BAM!"
+                        $bullets -= 1
+                        sleep(0.5)
+                        puts"You got it!"
+                        puts"You have a total of 200 meat."
+                        $meat = 200
+                        $food += $meat
+                        break
+                    end
+                end
+                if $animal == "Wolf"
+                    puts $gender + " is running to you!"
+                    $bullets -= 1
+                    $deathtimer += 1
+                    input = gets
+                    if $deathtimer > 5
+                        puts"Too slow! You are dead!"
+                        exit
+                    end
+                    if $deathtimer != 0
+                        puts"BAM!"
+                        sleep(0.5)
+                        puts"You got it!"
+                        $meat = 80
+                        $food += $meat
+                        break
+                    end
+                end
+            end
+        end
+    end
+    def pause_game
+        loop do
+            puts"\nPress enter to continue."
+            gets
+            break
+        end
+    end
+end
+
+
+johnny = Oxen.new
+johnny.fort()
+# No cheats plz :) |
+#                  \/
+johnny.check_for_oxen
+johnny.move(75, "Kansas River Crossing")
+johnny.river("Kansas River Crossing")
+johnny.check_for_oxen
+johnny.move(258, "Big Blue River Crossing")
+johnny.river("Big Blue River Crossing")
+johnny.check_for_oxen
+johnny.move(328, "Fort Kearny")
+johnny.fort()
+johnny.check_for_oxen
+johnny.move(413, "Chimney Rock")
+johnny.landmark("Chimney Rock")
+johnny.move(328, "Fort Laramie")
+johnny.fort()
+johnny.check_for_oxen
+johnny.move(512, "Independance Rock")
+johnny.landmark("Independance Rock")
+johnny.move(591, "South Pass")
+johnny.landmark("South Pass")
+johnny.move(623, "Green River Crossing")
+johnny.river("Green River Crossing")
+johnny.check_for_oxen
+johnny.move(683, "Fort Hall")
+johnny.fort()
+johnny.check_for_oxen
+johnny.move(623, "Snake River Crossing")
+johnny.river("Snake River Crossing")
+johnny.check_for_oxen
+johnny.move(712, "The Dalles")
+johnny.the_dalles
